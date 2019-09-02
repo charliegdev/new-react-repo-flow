@@ -33,13 +33,7 @@ Configure React Hook rules according to [the official doc](https://www.npmjs.com
 Install Prettier:
 
 ```bash
-yarn add --dev prettier
-```
-
-Configure Prettier with ESLint:
-
-```bash
-yarn add --dev eslint-config-prettier eslint-plugin-prettier
+yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 Then, in `.eslintrc`, add this config:
