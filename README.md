@@ -26,6 +26,13 @@ eslint --init
 
 During the process, ESLint will ask you about the environment. Remember to select both the browser and node, otherwise variables like `process` and `module` will be treated as undefined by ESLint.
 
+Once the ESLint initiation is complete, add this rule:
+```json
+"rules": {
+  "no-unused-vars": "warn"
+}
+```
+
 Configure the React plugin for ESLint according to [the official doc](https://github.com/yannickcr/eslint-plugin-react).
 
 Configure React Hook rules according to [the official doc](https://www.npmjs.com/package/eslint-plugin-react-hooks). Depending on the version, this may not be needed anymore.
