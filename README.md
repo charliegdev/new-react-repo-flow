@@ -33,7 +33,16 @@ Once the ESLint initiation is complete, add this rule:
 }
 ```
 
-Configure the React plugin for ESLint according to [the official doc](https://github.com/yannickcr/eslint-plugin-react).
+
+Configure the React plugin for ESLint according to [the official doc](https://github.com/yannickcr/eslint-plugin-react). Add this rule to `.eslintrc.json` to avoid a warning caused by eslint-plugin-react:
+
+```json
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+```
 
 Configure React Hook rules according to [the official doc](https://www.npmjs.com/package/eslint-plugin-react-hooks). Depending on the version, this may not be needed anymore.
 
