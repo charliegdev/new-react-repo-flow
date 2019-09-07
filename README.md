@@ -46,6 +46,32 @@ Configure the React plugin for ESLint according to [the official doc](https://gi
 
 Configure React Hook rules according to [the official doc](https://www.npmjs.com/package/eslint-plugin-react-hooks). Depending on the version, this may not be needed anymore.
 
+If needed, we can also enable absolute imports for local files according to [this article](https://dev.to/oliverandrich/absolute-imports-with-create-react-app-and-vscode-ihn). Here is the gist:
+
+1. Create `jsconfig.json` in root:
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+```
+
+1. Modify `.eslintrc`:
+```json
+{
+  "extends": ["react-app", "plugin:import/errors", "plugin:import/warnings"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}
+```
+
 Install Prettier:
 
 ```bash
