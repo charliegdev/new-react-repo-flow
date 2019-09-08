@@ -4,9 +4,10 @@ Since React version keeps getting updates, I can't simply create a repo with my 
 
 ## Workflow
 
+When creating a new React repo, follow this list **in the exact order** to get the ideal config:
+
 ### Create & Eject
 
-When creating a new React repo, follow this list **in the exact order** to get the ideal config:
 
 - Create the React repo:
 
@@ -75,10 +76,12 @@ eslint --init
 }
 ```
 
-3. To make Webpack able to load those absolute imports, add this to `.env`:
+3. To make Webpack able to load those absolute imports, add this to `.env` at project root:
 ```
 NODE_PATH=src
 ```
+
+4. Optionally, if that line is the only line in `.env`, we might as well include that in our repository by removing it from `.gitignore`.
 
 ### Prettier
 
