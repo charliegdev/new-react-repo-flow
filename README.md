@@ -4,6 +4,8 @@ Since React version keeps getting updates, I can't simply create a repo with my 
 
 ## Workflow
 
+### Create & Eject
+
 When creating a new React repo, follow this list **in the exact order** to get the ideal config:
 
 - Create the React repo:
@@ -12,13 +14,15 @@ When creating a new React repo, follow this list **in the exact order** to get t
 npx create-react-app my-app-name
 ```
 
-- Once it's done, **eject**.
+- *[Optional, but recommended]* Once it's done, **eject**.
 
 ```bash
 cd my-app-name && yarn eject
 ```
 
-- Configure ESLint:
+### ESLint 
+
+- Initiate ESLint:
 
 ```bash
 eslint --init
@@ -76,7 +80,9 @@ eslint --init
 NODE_PATH=src
 ```
 
-- Install Prettier:
+### Prettier
+
+- Install Prettier and its configurations:
 
 ```bash
 yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
